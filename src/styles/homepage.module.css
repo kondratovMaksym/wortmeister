@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap");
+
+.container {
+  display: flex;
+}
+
+.rightPart {
+  background-color: rgb(240, 240, 240);
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 100px 200px 50px 290px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .rightPart {
+    padding: 100px 20px 50px 20px; /* Уменьшаем отступы для мобильных */
+    width: 100%; /* Устанавливаем ширину для правой части */
+  }
+
+  /* Для навбара можно тоже задать ширину, если нужно */
+  .navbar {
+    width: 100%; /* Ширина навбара равна ширине правой части */
+  }
+}

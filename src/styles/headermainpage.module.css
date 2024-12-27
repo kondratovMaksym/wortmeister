@@ -1,0 +1,180 @@
+.header {
+  text-align: center;
+  font-family: "Kaushan Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.subHeader {
+  text-align: center;
+  font-size: 18px;
+  padding-left: 250px;
+}
+
+.subText {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.videoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.video {
+  height: 300px;
+  width: 500px;
+  background-color: red;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.game {
+  height: 200px;
+  width: 400px;
+  border-radius: 15px;
+  background-color: #fde4d1;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease; /* Добавляем плавный переход для topPart */
+  cursor: pointer;
+  border: 2px solid #f05a28;
+}
+.gameLast {
+  height: 200px;
+  width: 400px;
+  border-radius: 15px;
+  background-color: #e1e9f1;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease; /* Добавляем плавный переход для topPart */
+  cursor: pointer;
+  border: 2px solid #3a7ca5;
+}
+
+.gameText {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.topPart {
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 37%;
+  font-size: 20px;
+}
+.bottomPart {
+  padding: 5px 25px;
+  text-align: center;
+}
+.game:hover .gamePicture {
+  transform: rotate(
+    -15deg
+  ); /* Поворот изображения влево при наведении на topPart */
+}
+.game:hover .gamePicture2 {
+  transform: rotate(
+    15deg
+  ); /* Поворот изображения влево при наведении на topPart */
+}
+.game:hover .gamePicture3 {
+  transform: translateY(-2px); /* Поднимаем картинку на 10px */
+}
+.game:hover {
+  transform: scale(1.02);
+}
+.gamePicture {
+  transition: transform 0.3s ease; /* Плавный переход для изображения */
+}
+.gamePicture2 {
+  transition: transform 0.3s ease;
+}
+.gamePicture3 {
+  transition: transform 0.3s ease;
+}
+.gameName {
+  margin-left: 20px;
+}
+.gameLast:hover .gamePicture3 {
+  transform: translateY(-2px); /* Поднимаем картинку на 10px */
+}
+.gameLast:hover {
+  transform: scale(1.02);
+}
+/* Анимация для h1 (длительность 1 секунда) */
+.h1Enter {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.h1EnterActive {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.h1Exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.h1ExitActive {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Анимация для p (выезд слева, длительность 0.5 секунды) */
+.pEnter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.pEnterActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.pExit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pExitActive {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Анимация для блока game (EverythingElse) */
+.gameEnter {
+  opacity: 0; /* Изначально элемент невидим */
+}
+
+.gameEnterActive {
+  opacity: 1; /* Элемент становится видимым */
+  transition: opacity 1500ms ease-out; /* Плавная анимация изменения прозрачности */
+}
+
+.gameExit {
+  opacity: 1;
+}
+
+.gameExitActive {
+  opacity: 0; /* Элемент исчезает */
+  transition: opacity 1500ms ease-out; /* Плавное исчезновение */
+}

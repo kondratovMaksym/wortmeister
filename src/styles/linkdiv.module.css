@@ -1,0 +1,64 @@
+.logLink {
+  margin-top: 80px;
+  text-decoration: none;
+  background-color: #f05a28; /* Красный цвет для кнопки */
+  color: #fafafa; /* Белый цвет для текста */
+  padding: 12px 24px; /* Отступы для кнопки */
+  border: none;
+  border-radius: 8px; /* Скругленные углы */
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase; /* Заглавные буквы */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход для фона и масштаба */
+}
+
+/* Стили для кнопки при наведении */
+.logLink:hover {
+  background-color: #ff3c1e; /* Более темный оттенок красного при наведении */
+}
+
+/* Центрируем кнопку */
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Пульсация кнопки */
+.pulsingButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logLink {
+  animation: pulse 1.5s infinite; /* Пульсация */
+}
+
+.logLink:hover {
+  animation: none; /* Остановка пульсации при наведении */
+}
+
+/* Пульсация */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+/* Убираем пульсацию при наведении */
+.logLink:hover {
+  animation: none;
+}

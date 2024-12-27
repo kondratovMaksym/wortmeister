@@ -1,0 +1,151 @@
+/* navbar.module.css */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333; /* Темно-серый фон */
+  color: #fafafa; /* Белый текст */
+  padding: 16px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  height: 100vh;
+  width: 90px; /* Фиксированная ширина */
+  position: fixed;
+  z-index: 1001;
+}
+
+.navbarButton {
+  margin: 22px 0;
+  color: #f05a28; /* Красный для кнопок */
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.navbarButtonSelected {
+  margin: 22px 0;
+  color: #ff3c1e;
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbarButtonSecondary {
+  color: #3a7ca5; /* Глубокий синий для вторичных кнопок */
+}
+
+.navbarButton:hover {
+  color: #ff3c1e; /* Красный для кнопок */
+}
+
+.navbarButtonSecondary:hover {
+  color: #2e9fe5; /* Глубокий синий для вторичных кнопок */
+}
+
+.logBtn {
+  color: #f05a28; /* Красный для кнопок */
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.logBtn:hover {
+  color: #ff2200; /* Красный для кнопок */
+}
+
+.logInBtn {
+  margin-top: 100px;
+  color: #f05a28; /* Красный для кнопок */
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.logInBtn:hover {
+  color: #ff2200; /* Красный для кнопок */
+}
+
+.userImage {
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-bottom: 15px;
+  width: 40px; /* Фиксированная ширина */
+  height: 40px; /* Фиксированная высота */
+  object-fit: cover;
+}
+.navbarUserInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  height: 50px; /* Зафиксированная высота для блока с изображением и логином */
+  flex-direction: column;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 1000px) {
+  .navbarButton {
+    margin: 15px 0;
+  }
+  .navbarUserInfo {
+    margin-top: 30px;
+  }
+  .userImage {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .navbarButtonSelected {
+    font-weight: 400;
+  }
+  .navbar {
+    flex-direction: row; /* Меняем на row для мобильных */
+    width: 100%; /* Заполняем всю ширину экрана */
+    height: auto; /* Высота становится авто */
+    padding: 8px 0; /* Уменьшаем отступы */
+    font-size: 5px;
+    position: relative;
+  }
+
+  .navbarButton {
+    margin: 0px 6px; /* Расстояние между кнопками на мобильных */
+    font-size: 12px;
+  }
+  .logInBtn {
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  .logBtn {
+    font-size: 12px;
+  }
+  .userImage {
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 30px; /* Уменьшаем размер изображения на мобильных */
+    height: 30px; /* Уменьшаем размер изображения на мобильных */
+  }
+
+  .navbarUserInfo {
+    flex-direction: row;
+    margin-top: -0px;
+  }
+}
