@@ -19,12 +19,15 @@ const Navbar = () => {
       <Link href={"/cards"} className={styles.navbarButton}>
         Cards
       </Link>
-      <button className={styles.navbarButton}>Learn</button>
-      <button
+      <Link href={"/learn"} className={styles.navbarButton}>
+        Learn
+      </Link>
+      <Link
+        href={"/resources"}
         className={`${styles.navbarButton} ${styles.navbarButtonSecondary}`}
       >
         Resources
-      </button>
+      </Link>
 
       <div className={styles.navbarUserInfo}>
         {user?.picture ? (

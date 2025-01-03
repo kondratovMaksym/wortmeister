@@ -21,10 +21,10 @@ export default async function Home() {
         data: {
           user_id: user.id,
           username: `${user.given_name} ${user.family_name}`,
-          wordsTotal: 0,
           bestTimeEasy: 0,
           bestTimeMid: 0,
           bestTimeHard: 0,
+          wordsArray: [],
         },
       });
     }

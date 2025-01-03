@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap");
+
+/* Заголовок */
+.header {
+  text-align: center;
+  font-family: "Kaushan Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+/* Основной контейнер */
+.container {
+  display: flex;
+}
+
+.rightPart {
+  background-color: rgb(240, 240, 240);
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 0px 150px 50px 240px;
+}
+
+.allResources {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.resource {
+  background-color: white;
+  border: 2px solid #f05a28;
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  transition: 0.5s all;
+  user-select: none;
+}
+.topPart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 20%;
+  font-size: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #3a7ca5;
+  transition: 0.5s all;
+}
+.resName {
+  margin: auto;
+}
+.bottomPart {
+  flex-basis: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+.visitBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.visitLink {
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #f05a28;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+.visitLink:hover {
+  transform: scale(1.02);
+  background-color: #ff2200;
+}
+
+.resource:hover .topPart {
+  color: #ff2200;
+}
+
+.picture {
+  transition: 0.5s all;
+}
+.resource:hover .picture {
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+.resource:hover {
+  transform: scale(1.02);
+}

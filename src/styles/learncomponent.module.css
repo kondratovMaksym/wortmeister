@@ -1,0 +1,224 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #f05a28;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+
+/* Категории */
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryLabel {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Радиокнопки */
+.radioGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Расстояние между группами радио */
+}
+
+/* Выпадающий список */
+.selectInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #f05a28;
+  border-radius: 5px;
+  appearance: none; /* Убираем стрелку в некоторых браузерах */
+  background: #fff;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="gray" d="M2 0L0 2h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 10px 10px;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: #f05a28;
+  box-shadow: 0 0 5px rgba(240, 90, 40, 0.5);
+}
+
+/* Кнопка отправки */
+.submitButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f05a28;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.submitButton:hover {
+  background-color: #ff2200;
+}
+
+/* Анимация появления кнопки */
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Расстояние между радиокнопкой и текстом */
+  font-size: 16px; /* Размер текста */
+}
+
+.radioInput {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f05a28; /* Цвет рамки */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.radioInput:checked {
+  background-color: #f05a28; /* Оранжевый цвет внутри */
+}
+
+.radioInput:hover {
+  border-color: #e04b24; /* Цвет рамки при наведении */
+}
+.wordDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+}
+.wordCard {
+  padding: 0px 30px;
+  width: 460px;
+  height: 300px;
+  border-radius: 15px;
+  border: 2px solid #f05a28;
+  background-color: white;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-break: anywhere; /* Фоллбэк для корректного разрыва слов */
+  lang: de;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.word {
+  text-align: center;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+.wordContent {
+  width: 100%;
+}
+.translation {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #f05a28;
+}
+.definition {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.definition a {
+  text-decoration: none;
+  color: #3a7ca5;
+  font-size: 16px;
+  text-decoration: underline;
+}
+.navBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.nextBtn {
+  width: 30%;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f05a28;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.nextBtn:hover {
+  background-color: #ff2200;
+}
+.nextBtn:disabled {
+  width: 30%;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #dedede;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: default;
+}
+.againBtnDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto;
+  transition: 0.3s all;
+  margin-top: -40px;
+}
+.picDiv {
+  padding: 8px;
+  border-radius: 50%;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.picDiv:hover {
+  background-color: rgb(79, 255, 114);
+}
+.picDiv:hover .rotatePic {
+  transform: rotate(360deg);
+}
+.rotatePic {
+  transition: 0.5s all;
+}
+
+.pEnter {
+  opacity: 0;
+  transform: scale(0.5) rotate(-45deg);
+}
+
+.pEnterActive {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.pExit {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.pExitActive {
+  opacity: 0;
+  transform: scale(0.5) rotate(45deg);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}

@@ -53,6 +53,18 @@ export const handleSubmit = async ({
   return shuffledData.slice(0, numberOfCards);
 };
 
+export const handleLearnSubmit = async (level: string, category: string) => {
+  const data = await prisma.word.findMany({
+    where: {
+      level: level,
+      category: category,
+    },
+  });
+
+  const shuffledData = shuffleArray(data);
+  return shuffledData;
+};
+
 export const revalidatePathFunc = () => {
   revalidatePath("/cards");
 };

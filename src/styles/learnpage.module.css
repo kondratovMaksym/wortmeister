@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap");
+
+/* Заголовок */
+.header {
+  text-align: center;
+  font-family: "Kaushan Script", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+/* Основной контейнер */
+.container {
+  display: flex;
+}
+
+.rightPart {
+  background-color: rgb(240, 240, 240);
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 0px 150px 50px 240px;
+}

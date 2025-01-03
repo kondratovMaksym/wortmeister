@@ -8,7 +8,7 @@
   background-color: rgb(240, 240, 240);
   min-width: 100%;
   min-height: 100vh;
-  padding: 100px 200px 50px 290px;
+  padding: 5px 200px 50px 290px;
 }
 
 @media (max-width: 600px) {
