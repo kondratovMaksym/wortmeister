@@ -19,7 +19,7 @@
   background-color: rgb(240, 240, 240);
   min-width: 100%;
   min-height: 100vh;
-  padding: 0px 150px 50px 240px;
+  padding: 20px 150px 50px 240px;
 }
 
 .allResources {
@@ -93,4 +93,25 @@
 }
 .resource:hover {
   transform: scale(1.02);
+}
+@media (max-width: 1200px) {
+  .rightPart {
+    padding: 20px 50px 50px 140px; /* Уменьшаем отступы для мобильных */
+    width: 100%; /* Устанавливаем ширину для правой части */
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .rightPart {
+    padding: 20px 20px 50px 20px; /* Уменьшаем отступы для мобильных */
+    width: 100%; /* Устанавливаем ширину для правой части */
+  }
+
+  /* Для навбара можно тоже задать ширину, если нужно */
+  .navbar {
+    width: 100%; /* Ширина навбара равна ширине правой части */
+  }
 }

@@ -7,6 +7,8 @@ import Image from "next/image";
 import cards from "@/images/icons8-flashcards-50.png";
 import books from "@/images/icons8-books-50.png";
 import learning from "@/images/icons8-learn-50.png";
+import VIdeo from "./VIdeo";
+import Link from "next/link";
 
 const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
   const [showHeader, setShowHeader] = useState(false);
@@ -66,15 +68,22 @@ const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
               {!logged && <LinkDiv />}
 
               <div className={styles.subText}>
-                Wortmeister helps you master German with ease. Learn new words ,
-                practice with flashcards and find helpful resources. <br />
-                Whether you are a beginner or advancing your skills, Wortmeister
-                keeps you motivated and on track. <br />
-                Start your journey today!
+                <div>Wortmeister helps you master German with ease.</div>
+                <div>
+                  Learn new words , practice with flashcards and find helpful
+                  resources.
+                </div>
+                <div>
+                  Whether you are a beginner or advancing your skills,
+                  Wortmeister keeps you motivated and on track.
+                </div>
+                <div>Start your journey today!</div>
               </div>
 
               <div className={styles.videoDiv}>
-                <div className={styles.video}></div>
+                <div className={styles.video}>
+                  <VIdeo />
+                </div>
               </div>
 
               <div className={styles.gameText}>
@@ -82,69 +91,75 @@ const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
               </div>
 
               <div className={styles.games}>
-                <div className={styles.game}>
-                  <div className={styles.topPart}>
-                    <div className={styles.gamePicture}>
-                      <Image
-                        className={styles.imageItself}
-                        src={cards}
-                        width={50}
-                        height={50}
-                        alt="cards"
-                      ></Image>
+                <Link className={styles.linktogame} href={"/cards"}>
+                  <div className={styles.game}>
+                    <div className={styles.topPart}>
+                      <div className={styles.gamePicture}>
+                        <Image
+                          className={styles.imageItself}
+                          src={cards}
+                          width={50}
+                          height={50}
+                          alt="cards"
+                        ></Image>
+                      </div>
+                    </div>
+                    <div className={styles.bottomPart}>
+                      <div className={styles.gameDescription}>
+                        Practice your German vocabulary with interactive
+                        flashcards. Flip through words and their meanings, test
+                        your memory, and improve your language skills in a fun
+                        way.
+                      </div>
                     </div>
                   </div>
-                  <div className={styles.bottomPart}>
-                    <div className={styles.gameDescription}>
-                      Practice your German vocabulary with interactive
-                      flashcards. Flip through words and their meanings, test
-                      your memory, and improve your language skills in a fun
-                      way.
-                    </div>
-                  </div>
-                </div>
+                </Link>
 
-                <div className={styles.game}>
-                  <div className={styles.topPart}>
-                    <div className={styles.gamePicture2}>
-                      <Image
-                        className={styles.imageItself}
-                        src={learning}
-                        width={50}
-                        height={50}
-                        alt="cards"
-                      ></Image>
+                <Link className={styles.linktogame} href={"/learn"}>
+                  <div className={styles.game}>
+                    <div className={styles.topPart}>
+                      <div className={styles.gamePicture2}>
+                        <Image
+                          className={styles.imageItself}
+                          src={learning}
+                          width={50}
+                          height={50}
+                          alt="cards"
+                        ></Image>
+                      </div>
+                    </div>
+                    <div className={styles.bottomPart}>
+                      <div className={styles.gameDescription}>
+                        Discover new German words daily along with their
+                        meanings. Improve your vocabulary with fresh words, and
+                        expand your language skills one step at a time.
+                      </div>
                     </div>
                   </div>
-                  <div className={styles.bottomPart}>
-                    <div className={styles.gameDescription}>
-                      Discover new German words daily along with their meanings.
-                      Improve your vocabulary with fresh words, and expand your
-                      language skills one step at a time.
-                    </div>
-                  </div>
-                </div>
+                </Link>
 
-                <div className={styles.gameLast}>
-                  <div className={styles.topPart}>
-                    <div className={styles.gamePicture3}>
-                      <Image
-                        className={styles.imageItself}
-                        src={books}
-                        width={50}
-                        height={50}
-                        alt="cards"
-                      ></Image>
+                <Link className={styles.linktogame} href={"/resources"}>
+                  <div className={styles.gameLast}>
+                    <div className={styles.topPart}>
+                      <div className={styles.gamePicture3}>
+                        <Image
+                          className={styles.imageItself}
+                          src={books}
+                          width={50}
+                          height={50}
+                          alt="cards"
+                        ></Image>
+                      </div>
+                    </div>
+                    <div className={styles.bottomPart}>
+                      <div className={styles.gameDescription}>
+                        Discover a variety of external resources to support your
+                        learning journey. Find websites, books, podcasts, and
+                        more to enhance your German language skills.
+                      </div>
                     </div>
                   </div>
-                  <div className={styles.bottomPart}>
-                    <div className={styles.gameDescription}>
-                      Discover a variety of external resources to support your
-                      learning journey. Find websites, books, podcasts, and more
-                      to enhance your German language skills.
-                    </div>
-                  </div>
-                </div>
+                </Link>
               </div>
             </div>
           </>

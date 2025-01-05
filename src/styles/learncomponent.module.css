@@ -222,3 +222,40 @@
   transform: scale(0.5) rotate(45deg);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
+
+@media (max-width: 700px) {
+  .word {
+    font-size: 25px;
+  }
+  .translation {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .word {
+    font-size: 25px;
+  }
+  .translation {
+    font-size: 18px;
+  }
+  .wordCard {
+    padding: 10px;
+  }
+  .definition {
+    margin-bottom: 25px;
+  }
+  .nextBtn:disabled {
+    width: 100px;
+  }
+  .nextBtn {
+    width: 100px;
+  }
+}
+@media (max-width: 400px) {
+  .word {
+    font-size: 22px;
+  }
+  .translation {
+    font-size: 16px;
+  }
+}

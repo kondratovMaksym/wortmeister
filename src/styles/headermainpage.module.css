@@ -24,12 +24,6 @@
   margin-top: 50px;
 }
 
-.video {
-  height: 300px;
-  width: 500px;
-  background-color: red;
-}
-
 .games {
   display: flex;
   justify-content: center;
@@ -60,6 +54,10 @@
   transition: transform 0.3s ease; /* Добавляем плавный переход для topPart */
   cursor: pointer;
   border: 2px solid #3a7ca5;
+}
+.linktogame {
+  text-decoration: none;
+  color: black;
 }
 
 .gameText {
@@ -177,4 +175,55 @@
 .gameExitActive {
   opacity: 0; /* Элемент исчезает */
   transition: opacity 1500ms ease-out; /* Плавное исчезновение */
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 700px) {
+  .videoDiv {
+    margin: auto;
+    margin-top: 50px;
+  }
+  .subHeader {
+    padding-left: 170px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .gameText {
+    font-size: 16px;
+  }
+}
+@media (max-width: 475px) {
+  .subText {
+    font-size: 14px;
+  }
+  .subHeader {
+    padding-left: 0px;
+  }
+  .game {
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gameLast {
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottomPart {
+    display: none;
+  }
+}
+@media (max-width: 405px) {
+  .subText {
+    font-size: 13px;
+  }
+  .gameText {
+    font-size: 13px;
+  }
 }

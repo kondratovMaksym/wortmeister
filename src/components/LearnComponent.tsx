@@ -111,7 +111,7 @@ const LearnComponent = () => {
                             onClick={() => handleChangeIndex("Prev")}
                             disabled={wordIndex === 0}
                           >
-                            Previous
+                            Prev
                           </button>
                           <button
                             className={styles.nextBtn}

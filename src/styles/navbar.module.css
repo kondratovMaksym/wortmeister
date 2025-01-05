@@ -122,6 +122,7 @@
     padding: 8px 0; /* Уменьшаем отступы */
     font-size: 5px;
     position: relative;
+    gap: 10px;
   }
 
   .navbarButton {
