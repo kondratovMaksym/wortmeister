@@ -70,8 +70,10 @@ const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
               {!logged ? (
                 <LinkDiv />
               ) : (
-                <div className={styles.userNameHeader}>
-                  Welcome back {user?.given_name}!
+                <div className={styles.userNameHeaderDiv}>
+                  <div className={styles.userNameHeader}>
+                    Welcome back {user?.family_name}
+                  </div>
                 </div>
               )}
 
