@@ -66,8 +66,10 @@
   font-size: 20px;
 }
 .userNameHeader {
+  padding: 20px;
   margin-top: 80px;
   font-size: 16px;
+  text-align: center;
 }
 .topPart {
   padding: 5px 25px;
