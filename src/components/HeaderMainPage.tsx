@@ -9,11 +9,13 @@ import books from "@/images/icons8-books-50.png";
 import learning from "@/images/icons8-learn-50.png";
 import VIdeo from "./VIdeo";
 import Link from "next/link";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
   const [showHeader, setShowHeader] = useState(false);
   const [showSubHeader, setShowSubHeader] = useState(false);
   const [showEveryhting, setShowEverything] = useState(false);
+  const { user } = useKindeBrowserClient();
 
   useEffect(() => {
     setShowHeader(true); // Запускаем анимацию h1 сразу
@@ -65,7 +67,13 @@ const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
         >
           <>
             <div>
-              {!logged && <LinkDiv />}
+              {!logged ? (
+                <LinkDiv />
+              ) : (
+                <div className={styles.userNameHeader}>
+                  Welcome back {user?.given_name}!
+                </div>
+              )}
 
               <div className={styles.subText}>
                 <div>Wortmeister helps you master German with ease.</div>

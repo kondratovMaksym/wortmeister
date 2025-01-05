@@ -65,7 +65,10 @@
   margin-top: 50px;
   font-size: 20px;
 }
-
+.userNameHeader {
+  margin-top: 80px;
+  font-size: 16px;
+}
 .topPart {
   padding: 5px 25px;
   display: flex;
