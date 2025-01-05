@@ -69,10 +69,12 @@
   padding: 20px;
   border: 2px solid #f05a28;
   border-radius: 5px;
-  margin-top: 80px;
   font-size: 16px;
   text-align: center;
   width: fit-content;
+  margin: auto;
+  margin-top: 80px;
+  background-color: white;
 }
 .topPart {
   padding: 5px 25px;
