@@ -72,7 +72,7 @@ const HeaderMainPage: React.FC<{ logged: boolean }> = ({ logged }) => {
               ) : (
                 <div className={styles.userNameHeaderDiv}>
                   <div className={styles.userNameHeader}>
-                    Welcome back {user?.family_name}
+                    Welcome back {user?.given_name}
                   </div>
                 </div>
               )}
